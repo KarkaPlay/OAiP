@@ -7,3 +7,13 @@
 *.vcxproj
 *.filters
 *.user
+*.pdb
+Лабораторная работа 2-3/.vs/Лабораторная работа 2-3/v16/.suo
+*.lastbuildstate
+*.tlog
+*.obj
+*.log
+*.recipe
+*.idb
+*.ilk
+*.exe
