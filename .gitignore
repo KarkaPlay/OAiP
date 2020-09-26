@@ -18,3 +18,5 @@
 *.exe
 *.~vsdx
 *.vsdx
+*.tmp
+Шаблон отчета.docx
