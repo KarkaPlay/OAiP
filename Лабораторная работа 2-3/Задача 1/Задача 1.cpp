@@ -6,23 +6,17 @@ int main()
 {
     setlocale(LC_ALL, "Russian");
 
-    printf("x^2 + bx + c = 0\n");
+    printf("(ax-b)/2 + ab = 0\n");
+
+    printf("Введите a: ");
+    float a;
+    scanf_s("%f", &a);
 
     printf("Введите b: ");
-    int b;
-    scanf_s("%d", &b);
+    float b;
+    scanf_s("%f", &b);
 
-    printf("Введите c: ");
-    int c;
-    scanf_s("%d", &c);
+    float x = (b / a) - 2 * b;
 
-    printf("x^2 + %dx + %d\n", b, c);
-
-    float d = b*b - 4*c;
-    int x1 = (-b - sqrt(d)) / 2;
-    int x2 = (-b + sqrt(d)) / 2;
-
-    printf("x1 = %d\n", x1);
-    printf("x2 = %d\n", x2);
-
+    printf("x = %f\n", x);
 }
