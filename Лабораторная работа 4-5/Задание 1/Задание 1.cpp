@@ -1,27 +1,23 @@
-﻿#include <iostream>
+﻿#include <iostream>;
 using namespace std;
 
 int main()
 {
-    setlocale(LC_ALL, "Russian");
-    cout << "Введите размер массива: ";
-    int n;
-    cin >> n;
-    int* N = new int[n];
-
-    cout << "Введите элементы массива: ";
-    for (int i = 0; i < n; i++)
-        cin >> N[i];
-    
-    for (int i = 0; i < n - 1; i++)
-        for (int j = 0; j < n - 1 - i; j++)
-            if (N[j] > N[j + 1])
-            {
+    int i=0, j=0, N[] = { 3, 5, 2, 1, 6, 4, 7 };  // Объявление массива и необходимых переменных
+    int n = sizeof(N) / sizeof(int);  // Длина массива
+    while (i < n - 1) {  // Внешний цикл
+        while (j < n - 1 - i) {  // Внутренний цикл
+            if (N[j] > N[j + 1]) {  // Если текущий элемент больше следующего, меняем их местами
                 int buf = N[j];
                 N[j] = N[j + 1];
                 N[j + 1] = buf;
             }
+            j++;  // Увеличиваем j
+        }
+        j = 0;  //  Обнуляем j
+        i++;  //  Увеличиваем i
+    }
 
-    for (int i = 0; i < n; i++)
-        cout << N[i] << " ";
+    for (int i = 0; i < n; i++)  // Вывод упорядоченного массива
+        printf("%d ", N[i]);
 }
