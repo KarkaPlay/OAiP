@@ -1,6 +1,8 @@
 #include <stdio.h>
+#include <locale.h>
 
 int main() {
+	setlocale(LC_ALL, "Russian");
 	int array[] = { 1, 4, 5, 0, 3, 2 }; // ќбъ€вление массива и необходимых переменных
 	int n = sizeof(array) / sizeof(int);
 	float k = 1.247; // фактор уменьшени€
